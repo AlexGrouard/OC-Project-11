@@ -1,0 +1,49 @@
+$primary: #ff6060;
+
+@mixin horizontal-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: auto 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover {
+  img {
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+.title {
+  @include horizontal-flex();
+  .right {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    .name {
+      width: 94px;
+      text-align: right;
+      margin-right: 10px;
+    }
+    .picture {
+      border-radius: 50%;
+      height: 64px;
+    }
+  }
+}
+
+.rating {
+  @include horizontal-flex();
+  .tag {
+    background-color: $primary;
+    color: white;
+    width: 115px;
+    height: 25px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}

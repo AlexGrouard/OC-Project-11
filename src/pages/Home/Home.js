@@ -1,5 +1,5 @@
 import data from '../../data/data.json'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import styles from './Home.module.scss'
 import Banner from '../../components/Banner/Banner.js'
 import Card from '../../components/Card/Card.js'
