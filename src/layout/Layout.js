@@ -1,26 +1,26 @@
 import Header from './Header/Header.js';
 import Footer from './Footer/Footer.js';
 import styles from './Layout.module.scss';
-import { BrowserRouter, Router, Route} from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from '../pages/Home/Home.js';
-import Fiche from '../pages/fiches-logements/fiche.js';
+import Fiche from '../pages/fiches-logements/Fiche.js';
 import About from '../pages/About/About.js';
+import Error from '../pages/404/Error.js';
 
 function Layout(){
     return (
-        <BrowserRouter>
+        <Router>
             <div className={styles.main}>
                 <Header />
-                <routes>
-                    <Route path="/" element={<Home />}/>
-                    <Route path="/fiche" element={<Fiche />}/>
-                    <Route path="/about" element={<About />}/>
-                    <Route path="*" element={<Error/>}/>   
-                </routes>
-                
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/fiche" element={<Fiche />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
                 <Footer />
             </div>
-        </BrowserRouter>
+        </Router>
     );
 }
 export default Layout;

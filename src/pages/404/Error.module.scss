@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  min-height: calc(100vh - 333px);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 288px;
+  margin-top: 169px;
+  margin-bottom: 66px;
+}
+
+p {
+  font-size: 36px;
+}
+
+.link {
+  text-decoration: underline;
+}

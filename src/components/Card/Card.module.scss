@@ -1,0 +1,20 @@
+.main {
+  flex-direction: column;
+  height: 340px;
+  width: calc(33% - 50px);
+  margin-right: 50px;
+  margin-bottom: 50px;
+  .cover {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 340px;
+    width: 340px;
+  }
+  .title {
+    color: white;
+    position: relative;
+    top: -60px;
+    right: -20px;
+    width: 300px;
+  }
+}

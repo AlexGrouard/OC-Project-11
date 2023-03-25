@@ -1,0 +1,11 @@
+$secondary-color: #f6f6f6;
+
+.container {
+  background-color: $secondary-color;
+  margin: 46px 100px;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-top: 56px;
+}

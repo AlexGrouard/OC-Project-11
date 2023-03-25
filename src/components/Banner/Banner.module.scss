@@ -1,0 +1,27 @@
+$smallBanner: 111px;
+$bigBanner: 223px;
+//mixin
+@mixin Banner($img, $height) {
+  margin: auto 100px;
+  height: $height;
+  background-image: url($img);
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+//
+.home {
+  @include Banner("../../assets/home-banner.png", $bigBanner);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: white;
+    font-size: 48px;
+  }
+}
+
+.about {
+  @include Banner("../../assets/about-banner.png", $bigBanner);
+}
