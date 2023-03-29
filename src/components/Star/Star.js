@@ -1,32 +1,20 @@
-//import styles from './Star.module.scss'
+import styles from './Star.module.scss'
 import redStar from '../../assets/UI/star_red.svg'
 import greyStar from '../../assets/UI/star_grey.svg'
 
-function Star(rating){
-    let i = 0;
-    let nbr = rating.value
-//if no numbers provided add 5 empty stars
-//if number provided then add the number of color stars and if it's lower than 5 add enough empty star to go to 5.
-    while (i < 5){
-        i++;
-        console.log(i)
-        if (nbr > 0){
-            for (let e = 0; nbr < e; e++ ){
-                i++;
-                return (<img src={redStar} alt="red star"></img>)
-                
-            }
-            if (i < 5){
-                return <img src={greyStar} alt="red star"></img>
-                i++;
-            }
+function Star({ rating }){
+    let i = 1
+    const stars = []
+    //loop to get the right amount of rating stars as given in the data
+    for ( i ; rating >= i; i++ ) {
+        if (i => rating){
+            stars.push (<img key={i} src={redStar} alt="red star"></img>)
         }
-        else{
-            return <img src={greyStar} alt="grey star"></img>
-            i++;
-        }
-        
-    }    
+    }
+    //loop to complete the 5 stars rating
+    for (i ; i < 6; i++) {
+        stars.push (<img key={i} src={greyStar} alt="grey star"></img>)
+    }
+    return <div className={styles.stars}>{stars}</div>
 }
-
 export default Star

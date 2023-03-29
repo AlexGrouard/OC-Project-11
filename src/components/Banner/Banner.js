@@ -1,9 +1,8 @@
-import { useParams } from 'react-router-dom'
+
 import styles from './Banner.module.scss'
 
-function Banner(){
-    const params = useParams()
-    if (params.about) {
+function Banner({page}){
+    if (page === "about") {
         return(
             <div className={styles.about}>
             </div>

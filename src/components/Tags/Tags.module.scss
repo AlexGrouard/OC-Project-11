@@ -1,0 +1,18 @@
+.allTag{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6060;
+    border-radius: 10px;
+    width: 115px;
+    height: 25px;
+    font-size: 14px;
+    margin-right: 10px;
+    color: white;
+  }

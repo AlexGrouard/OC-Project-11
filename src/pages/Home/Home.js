@@ -9,7 +9,7 @@ function Home(){
     //
     return (
         <div className={styles.main}>
-            <Banner />
+            <Banner page='home'/>
             <div className={styles.container}>
                 {Cards}
             </div>
