@@ -4,10 +4,8 @@ footer {
 
 .main {
   height: 209px;
-  display: flex;
+  composes: allCenter from "../../style/index.scss";
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: medium;
   background-color: black;
   color: white;

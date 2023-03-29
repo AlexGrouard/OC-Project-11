@@ -1,21 +1,17 @@
-$primary: #ff6060;
-
 @mixin horizontal-flex {
   display: flex;
   justify-content: space-between;
 }
 
 .container {
-  margin: auto 100px;
+  composes: centerContainer from "../../style/index.scss";
   display: flex;
   flex-direction: column;
 }
 
-.cover {
-  img {
-    border-radius: 25px;
-    object-fit: cover;
-  }
+.coverImg {
+  composes: bigRadius from "../../style/index.scss";
+  object-fit: cover;
 }
 
 .title {

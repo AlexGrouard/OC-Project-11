@@ -7,15 +7,13 @@ $bigBanner: 223px;
   background-image: url($img);
   background-position: center;
   background-size: cover;
-  border-radius: 25px;
+  composes: bigRadius from "../../style/index.scss";
 }
 
 //
 .home {
   @include Banner("../../assets/home-banner.png", $bigBanner);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  composes: allCenter from "../../style/index.scss";
   p {
     color: white;
     font-size: 48px;

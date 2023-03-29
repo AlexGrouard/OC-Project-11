@@ -1,15 +1,13 @@
-//Variables
-$primary:#FF6060;
 .header{
   display: flex;
   justify-content: space-between;
   margin:40px 100px;
-    nav{
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-        a{
-          padding-left: 57px;
-        }
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+    a{
+      padding-left: 57px;
     }
 }

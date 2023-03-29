@@ -1,20 +1,16 @@
 .allTag{
-    display: flex;
+    composes: allCenter from "../../style/index.scss";
     justify-content: space-around;
-    align-items: center;
 }
 
 .tag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ff6060;
-    border-radius: 10px;
+    composes: allCenter from "../../style/index.scss";
+    composes: primaryBackground from "../../style/index.scss";
+    composes: smallRadius from "../../style/index.scss";
     min-width: 100px;
     padding-left: 10px;
     padding-right: 10px;
     height: 25px;
     font-size: 14px;
     margin-right: 10px;
-    color: white;
   }

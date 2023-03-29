@@ -11,7 +11,7 @@ function Fiche() {
     return (
         <section className={styles.container}>
             <div className={styles.cover}>
-                <img src={logement.cover} alt={logement.title} />
+                <img className={styles.coverImg}src={logement.cover} alt={logement.title} />
             </div>
             <div className={styles.title}>
                 <div className={styles.left}>

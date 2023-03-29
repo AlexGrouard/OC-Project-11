@@ -1,3 +1,3 @@
 .collapsable{
-    margin: auto 100px;
+    composes: centerContainer from "../../style/index.scss";
 }

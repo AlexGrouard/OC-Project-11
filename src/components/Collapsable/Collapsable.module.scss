@@ -1,16 +1,11 @@
-$primary:#FF6060;
-$secondary:#F6F6F6;
-
 .main {
   margin-top: 31px;
 }
 .title {
-  background-color: $primary;
-  display: flex;
+  composes: primaryBackground from "../../style/index.scss";
+  composes: allCenter from "../../style/index.scss";
+  composes: smallRadius from "../../style/index.scss";
   justify-content: space-between;
-  align-items: center;
-  color: white;
-  border-radius: 10px;
   height: 47px;
   span{
     padding-left: 10px;
@@ -22,9 +17,9 @@ $secondary:#F6F6F6;
 .content {
   display: flex;
   flex-direction: column;
-  background-color: $secondary;
+  composes: secondaryBackground from "../../style/index.scss";
   height: 185px;
-  border-radius: 10px;
+  composes: smallRadius from "../../style/index.scss";
   p{
     font-size: medium;
     padding: 10px;

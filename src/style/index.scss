@@ -6,6 +6,7 @@ $font: Montserrat;
 $primary:#FF6060;
 $secondary:#F6F6F6;
 
+
 //Style
 body {
   margin: 0;
@@ -28,3 +29,27 @@ code {
     monospace;
 }
 
+.primaryBackground {
+  background-color: $primary;
+  color: white;
+}
+
+.secondaryBackground {
+  background-color: $secondary;
+}
+.centerContainer{
+  margin: auto 100px;
+}
+.allCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallRadius{
+  border-radius: 10px;
+}
+
+.bigRadius{
+  border-radius: 25px;
+}
