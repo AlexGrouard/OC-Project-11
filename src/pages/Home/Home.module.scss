@@ -9,3 +9,14 @@ $secondary-color: #f6f6f6;
   padding-left: 50px;
   padding-top: 56px;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    background-color: white;
+    margin: 10px;
+    justify-content: center;
+  }
+
+}

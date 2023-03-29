@@ -1,24 +1,21 @@
+import { useParams } from 'react-router-dom'
 import styles from './Banner.module.scss'
 
 function Banner(){
-    const home = true
-    const about = false
-    //if route = home or about
-    if (home) 
-    return(
-            <div className={styles.home}>
-                <p>Chez vous, partout et ailleurs</p>
-            </div>
-        )
-    if (about) {
+    const params = useParams()
+    if (params.about) {
         return(
             <div className={styles.about}>
             </div>
         )
     }
     else{
-        return  <div className={styles.none}></div>
-    }
+        return(
+            <div className={styles.home}>
+                <p>Chez vous, partout et ailleurs</p>
+            </div>
+        )
+    } 
 }
 
 export default Banner

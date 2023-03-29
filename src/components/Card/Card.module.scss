@@ -18,3 +18,18 @@
     width: 300px;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  
+  .main {
+    flex-direction: column;
+    width: 335px;
+    margin : 10px;
+    .cover {
+      height: 255px;
+      width: 335px;
+    }
+  }
+  
+}

@@ -1,6 +1,8 @@
 import data from '../../data/data.json'
 import styles from './Fiche.module.scss'
 import { useParams } from 'react-router-dom'
+import Star from '../../components/Star/Star.js'
+import Collapsable from '../../components/Collapsable/Collapsable';
 
 function Fiche() {
     const params = useParams();
@@ -23,18 +25,18 @@ function Fiche() {
             </div>
             <div className={styles.rating}>
                 <div className={styles.tags}>
-                    {logement.tags.forEach(tag => {return <div className={styles.tag}>{tag}</div>})}
+                    {logement.tags.forEach(tag => {return <span className={styles.tag}>{tag}</span>})}
                 </div>
                 <div className={styles.stars}>
-                    {/*add star component*/}
+                    <Star value={logement.rating}/>
                 </div>
             </div>
             <article className={styles.description}>  
                 <div className={styles.left}>
-                    {/*add collapsable component with logement.description*/}
+                    <Collapsable  title='Description' content={logement.description}/>
                 </div>
                 <div className={styles.right}>
-                    {/*add collapsable component with logement.equipement*/}
+                    <Collapsable  title='Equipements' content={logement.equipments}/>
                 </div>
             </article>
         </section>

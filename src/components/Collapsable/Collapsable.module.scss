@@ -1,0 +1,32 @@
+$primary:#FF6060;
+$secondary:#F6F6F6;
+
+.main {
+  margin-top: 31px;
+}
+.title {
+  background-color: $primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  height: 47px;
+  span{
+    padding-left: 10px;
+  }
+}
+.arrow{
+  padding-right: 10px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary;
+  height: 185px;
+  border-radius: 10px;
+  p{
+    font-size: medium;
+    padding: 10px;
+  }
+}

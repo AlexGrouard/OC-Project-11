@@ -38,12 +38,16 @@ $primary: #ff6060;
 
 .rating {
   @include horizontal-flex();
-  .tag {
+  .tags {
+    @include horizontal-flex();
     background-color: $primary;
-    color: white;
+    border-radius: 10px;
     width: 115px;
     height: 25px;
     font-size: 14px;
     margin-right: 10px;
+    .tag {
+      color: white;
+    }
   }
 }
