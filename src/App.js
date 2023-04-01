@@ -1,9 +1,9 @@
 import Layout from './layout/Layout.js';
-//import styles from './style/App.module.scss';
+import styles from './style/App.module.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Layout />
     </div>
   );
