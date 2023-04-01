@@ -8,15 +8,18 @@
   display: flex;
   flex-direction: column;
 }
-
+.cover{
+  composes: allCenter from "../../style/index.scss";
+}
 .coverImg {
   composes: bigRadius from "../../style/index.scss";
   object-fit: cover;
+  height: 415px;
 }
 
-.title {
+.titles {
   @include horizontal-flex();
-  .right {
+  .picture {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -35,3 +38,10 @@
 .rating {
   @include horizontal-flex();
 }
+
+.allTag{
+  composes: allCenter from "../../style/index.scss";
+  justify-content: space-around;
+}
+ .description {
+ }

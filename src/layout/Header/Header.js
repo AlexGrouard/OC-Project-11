@@ -1,6 +1,6 @@
 import logo from '../../assets/UI/header-logo.svg'
 import styles from './Header.module.scss'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Header () {
     return(
@@ -9,8 +9,8 @@ function Header () {
                 <img src={logo} alt="footer logo" width="122" height="40"></img>
             </div>
             <nav>
-                <Link to='/'>Accueil</Link>
-                <Link to='/about'>A propos</Link>
+                <NavLink to='/'>Accueil</NavLink>
+                <NavLink to='/about'>A propos</NavLink>
             </nav>
         </header>
     );

@@ -1,3 +1,4 @@
 .collapsable{
-    composes: centerContainer from "../../style/index.scss";
+    composes: allCenter from "../../style/index.scss";
+    flex-direction: column;
 }

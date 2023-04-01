@@ -1,26 +1,30 @@
 .main {
-  flex-direction: column;
+//  flex-direction: column;
   height: 340px;
-  width: calc(33% - 50px);
+//  width: calc(33% - 40px);
   margin-right: 50px;
   margin-bottom: 50px;
-  .cover {
-    object-fit: cover;
-    border-radius: 10px;
-    height: 340px;
-    width: 340px;
-  }
-  .title {
-    color: white;
-    position: relative;
-    top: -60px;
-    right: -20px;
-    width: 300px;
-  }
+}
+// .overlay{
+//   z-index: 1;
+//   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 50%,rgba(0, 0, 0, 0.9) 100%);
+//   composes: bigRadius from "../../style/index.scss";
+// }
+.cover {
+  object-fit: cover;
+  composes: smallRadius from "../../style/index.scss";
+  height: 340px;
+  width: 340px;
+}
+.title {
+  color: white;
+  position: relative;
+  top: -60px;
+  right: -20px;
+  width: 300px;
 }
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 350px) {
   
   .main {
     flex-direction: column;

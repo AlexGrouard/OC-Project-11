@@ -18,10 +18,6 @@ body {
 a {
   color: $primary;
   text-decoration: none;
-    &:visited, &:hover{
-      color: $primary;
-      text-decoration: underline;
-    }
 }
 
 code {

@@ -1,8 +1,3 @@
-.allTag{
-    composes: allCenter from "../../style/index.scss";
-    justify-content: space-around;
-}
-
 .tag {
     composes: allCenter from "../../style/index.scss";
     composes: primaryBackground from "../../style/index.scss";

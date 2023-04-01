@@ -1,20 +1,13 @@
-
 import styles from './Banner.module.scss'
 
-function Banner({page}){
-    if (page === "about") {
-        return(
-            <div className={styles.about}>
+function Banner({ text, imageBg }){
+    return (
+        <div className={styles.banner} style={{backgroundImage : `url(${imageBg})`}}>
+            <div className={styles.overlay} >
+                <p className={styles.text}>{text}</p>
             </div>
-        )
-    }
-    else{
-        return(
-            <div className={styles.home}>
-                <p>Chez vous, partout et ailleurs</p>
-            </div>
-        )
-    } 
-}
+        </div>
+    )
 
+}
 export default Banner

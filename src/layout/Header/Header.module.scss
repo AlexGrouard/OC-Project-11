@@ -1,3 +1,5 @@
+$primary:#FF6060;
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -7,7 +9,15 @@ nav{
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-    a{
-      padding-left: 57px;
-    }
+  a {
+    padding-left: 57px;
+  }
+  
+  a[class = "active"] {
+    text-decoration: underline;
+    }  
+}
+
+@media screen and (max-width: 350px) {
+  //put menu text in upper case
 }
