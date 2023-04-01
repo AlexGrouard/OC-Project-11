@@ -6,7 +6,9 @@
   composes: allCenter from "../../style/index.scss";
   composes: smallRadius from "../../style/index.scss";
   justify-content: space-between;
+  font-size: 24px;
   height: 47px;
+  min-width: 100%;
   span{
     padding-left: 10px;
   }
@@ -14,14 +16,36 @@
 .arrow{
   padding-right: 10px;
 }
+
 .content {
-  display: flex;
-  flex-direction: column;
   composes: secondaryBackground from "../../style/index.scss";
-  height: 185px;
   composes: smallRadius from "../../style/index.scss";
+  .show{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding-bottom: 30px;
+  }
+  .hide{
+    display: none;
+  }
   p{
     font-size: medium;
     padding: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 390px) {
+
+  .title{
+      font-size: 16px;
+  }
+  .arrow{
+    img{
+      height: 18px;
+      width: 18px;
+    }
   }
 }

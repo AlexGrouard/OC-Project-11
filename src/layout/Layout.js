@@ -10,16 +10,17 @@ import Error from '../pages/404/Error.js';
 function Layout(){
     return (
         <Router>
-            <div className={styles.main}>
                 <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/fiche/:id" element={<Rental />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="*" element={<Error />} />
-                </Routes>
+                <div className={styles.main}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/rental/:id" element={<Rental />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
+                </div>
                 <Footer />
-            </div>
+
         </Router>
     );
 }

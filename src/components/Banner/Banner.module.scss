@@ -1,6 +1,5 @@
 .banner {
   composes: allCenter from "../../style/index.scss";
-  composes: centerContainer from "../../style/index.scss";
   composes: bigRadius from "../../style/index.scss";
   height: 223px;
   background-position: center;
@@ -8,7 +7,7 @@
 }
 .overlay{
   composes: allCenter from "../../style/index.scss";
-  border-radius: 25px;
+  composes: bigRadius from "../../style/index.scss";
   z-index: 1;
   width: 100%;
   height: 223px;
@@ -19,8 +18,17 @@
   font-size: 48px;
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 390px) {
   .banner{
     height: 112px;
+    border-radius: 10px;
+  }
+  .overlay{
+    height: 112px;
+    border-radius: 10px;
+  }
+  .text {
+    color: white;
+    font-size: 24px;
   }
 }

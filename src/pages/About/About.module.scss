@@ -1,4 +1,10 @@
 .collapsable{
-    composes: allCenter from "../../style/index.scss";
-    flex-direction: column;
+    margin: 0 150px;
 }
+
+@media screen and (max-width: 390px) {
+
+    .collapsable{
+        margin: 0 auto;
+    }
+  }

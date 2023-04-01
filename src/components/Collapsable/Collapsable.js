@@ -1,35 +1,31 @@
 import styles from './Collapsable.module.scss'
-import arrow from '../../assets/UI/arrow.svg'
-//import { useState } from 'react';
+import arrowDown from '../../assets/UI/arrow-down.svg'
+import arrowUp from '../../assets/UI/arrow-up.svg'
+import { useState } from 'react';
 
-function handleClick() {
-   // console.log('click')
-   /*
-               <div className="controls">
-                <button onClick={() => setCurrentSlide(currentSlide - 1)}>
-                Previous
-                </button>
-                <button onClick={() => setCurrentSlide(currentSlide + 1)}>
-                Next
-                </button>
-            </div>
-   */
-}
+function Collapsable ({title, content}){
 
-function Collapsable ({title, content, maxWidth}){
+    const [isOpen, setIsOpen] = useState(false)
+
     let equipementArrays = [];
     if (Array.isArray(content)) {
         content.forEach((el) => equipementArrays.push(<li key={el}>{el}</li>))
         return (
-            <div className={styles.main} style={{maxWidth :`${maxWidth}`}}>
-                <div className={styles.content} onClick={handleClick()}>
-                    <div className={styles.title}>
-                        <span>{title}</span>
-                        <div className={styles.arrow}>
-                            <img src={arrow} height='30px' width='30px'></img>
-                        </div>
-                    </div>
-                    <ul className={styles.equipement}> {equipementArrays} </ul>
+            <div className={styles.main}>
+                <div className={styles.content}>
+                    <button className={styles.title} onClick={()=> setIsOpen(!isOpen)}>{title}
+                         {!isOpen ? (
+                            <div className={styles.arrow}>
+                                <img src={arrowDown} alt='arrow down' height='30px' width='30px'></img>
+                            </div>
+                            ) : (
+                            <div className={styles.arrow}>
+                                <img src={arrowUp} alt='arrow up' height='30px' width='30px'></img>
+                            </div>
+                            )
+                        }
+                    </button>
+                    <div className={isOpen ? styles.show : styles.hide}><ul className={styles.equipement}> {equipementArrays} </ul></div>
                 </div>
     
             </div>
@@ -37,15 +33,21 @@ function Collapsable ({title, content, maxWidth}){
     }
     else {
         return (
-            <div className={styles.main} style={{maxWidth :`${maxWidth}`}}>
-                <div className={styles.content} onClick={handleClick()}>
-                    <div className={styles.title}>
-                        <span>{title}</span>
-                        <div className={styles.arrow}>
-                            <img src={arrow} height='30px' width='30px'></img>
-                        </div>
-                    </div>
-                    <p>{content}</p>
+            <div className={styles.main}>
+                <div className={styles.content}>
+                <button className={styles.title} onClick={()=> setIsOpen(!isOpen)}>{title}
+                         {!isOpen ? (
+                            <div className={styles.arrow}>
+                                <img src={arrowDown} alt='arrow down' height='30px' width='30px'></img>
+                            </div>
+                            ) : (
+                            <div className={styles.arrow}>
+                                <img src={arrowUp} alt='arrow up' height='30px' width='30px'></img>
+                            </div>
+                            )
+                        }
+                    </button>
+                    <p className={isOpen ? styles.show : styles.hide} >{content}</p>
                 </div>
     
             </div>

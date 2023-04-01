@@ -2,7 +2,7 @@ import styles from './Card.module.scss'
 import { Link } from 'react-router-dom'
 
 function Card({ logement }){
-    const idLink = '../fiche/' + logement.id
+    const idLink = '../rental/' + logement.id
     return(
         <div className={styles.main} >
             <Link to= {idLink} >

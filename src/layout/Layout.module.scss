@@ -1,0 +1,11 @@
+.main{
+    composes: centerContainer from "../style/index.scss";
+}
+
+@media screen and (max-width: 390px) {
+
+    .main {
+        margin: 0 20px;
+    }
+  
+}

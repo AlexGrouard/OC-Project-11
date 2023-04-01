@@ -1,0 +1,22 @@
+.slideshow{
+   width: 100%;
+   height: 415px; 
+   background-color: white;
+}
+
+.image{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    composes: bigRadius from "../../style/index.scss";
+}
+
+@media screen and (max-width: 390px) {
+
+    .slideshow {
+      height: 255px;
+    }
+    .image{
+      border-radius: 10px;
+    }
+  }

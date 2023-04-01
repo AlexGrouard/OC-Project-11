@@ -10,7 +10,9 @@ function Home(){
         <div className={styles.main}>
             <Banner text='Chez vous, partout et ailleurs' imageBg={homeBanner} />
             <div className={styles.container}>
-                {Cards}
+                <div className={styles.gridContainer}>
+                    {Cards}
+                </div>
             </div>
         </div>
     )

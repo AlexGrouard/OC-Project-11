@@ -1,13 +1,8 @@
-@mixin horizontal-flex {
-  display: flex;
-  justify-content: space-between;
-}
-
 .container {
-  composes: centerContainer from "../../style/index.scss";
   display: flex;
   flex-direction: column;
 }
+
 .cover{
   composes: allCenter from "../../style/index.scss";
 }
@@ -17,31 +12,97 @@
   height: 415px;
 }
 
-.titles {
-  @include horizontal-flex();
-  .picture {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    .name {
-      width: 94px;
-      text-align: right;
-      margin-right: 10px;
-    }
-    .picture {
-      border-radius: 50%;
-      height: 64px;
-    }
+.info {
+  display: flex;
+}
+.titles{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  .title{
+    font-size: 36px;
+    font-weight: normal;
   }
+}
+.allTag{
+  composes: allCenter from "../../style/index.scss";
+  justify-content: flex-start;
 }
 
 .rating {
-  @include horizontal-flex();
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-around;
+  align-items:flex-end;
+}
+.pictures {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+  .name {
+    width: 94px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .picture {
+    border-radius: 50%;
+    height: 64px;
+  }
 }
 
-.allTag{
-  composes: allCenter from "../../style/index.scss";
-  justify-content: space-around;
+ .content {
+  display: flex;
 }
- .description {
- }
+
+.description {
+  width : 50%;
+  margin-right: 20px;
+}
+.equipement {
+  width : 50%;
+}
+
+@media screen and (max-width: 390px) {
+
+  .coverImg {
+    height: 255px;
+  }
+  .info{
+    flex-direction: column;
+  }
+  .titles{
+    width: 100%;
+    .title {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .allTag{
+      margin: 10px 0;
+    }
+  }
+
+  .rating {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .pictures{
+      order: 2;
+    }
+  }
+
+
+  .content {
+    display: block;
+  }
+  .description {
+    width : 100%;
+  }
+  .equipement {
+    width : 100%;
+  }
+
+}

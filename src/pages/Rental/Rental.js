@@ -22,28 +22,28 @@ function Rental() {
                 <div className={styles.cover}>
                     <Slideshow className={styles.coverImg} images={logement.pictures} />
                 </div>
-                <div className={styles.titles}>
-                    <div>
-                        <h2>{logement.title}</h2>
+                <div className={styles.info}>
+                    <div className={styles.titles}>
+                        <div className={styles.title}>{logement.title}</div>
                         <div>{logement.location}</div>
+                        <div className={styles.allTag}>
+                            {tags}
+                        </div>
                     </div>
-                    <div className={styles.picture}>
-                        <div className={styles.name}>{logement.host.name}</div>
-                        <img className={styles.picture} src={logement.host.picture} alt={logement.host.name}/>
+                    <div className={styles.rating}>
+                        <div className={styles.pictures}>
+                            <div className={styles.name}>{logement.host.name}</div>
+                            <img className={styles.picture} src={logement.host.picture} alt={logement.host.name}/>
+                        </div>
+                        <div><Star rating={logement.rating}/></div>
                     </div>
                 </div>
-                <div className={styles.rating}>
-                    <div className={styles.allTag}>
-                        {tags}
+                <article className={styles.content}>  
+                    <div className={styles.description}>
+                        <Collapsable  title='Description' content={logement.description} />
                     </div>
-                    <Star rating={logement.rating}/>
-                </div>
-                <article className={styles.description}>  
-                    <div>
-                        <Collapsable  title='Description' content={logement.description} maxWidth='50%'/>
-                    </div>
-                    <div>
-                        <Collapsable  title='Equipements' content={logement.equipments} maxWidth='50%'/>
+                    <div className={styles.equipement}>
+                        <Collapsable  title='Equipements' content={logement.equipments} />
                     </div>
                 </article>
             </section>
