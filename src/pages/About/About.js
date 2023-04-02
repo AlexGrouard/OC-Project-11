@@ -1,7 +1,7 @@
-import Banner from '../../components/Banner/Banner';
-import Collapsable from '../../components/Collapsable/Collapsable';
+import Banner from 'components/Banner/Banner';
+import Collapsable from 'components/Collapsable/Collapsable';
 import styles from './About.module.scss';
-import aboutBanner from '../../assets/about-banner.png'
+import aboutBanner from 'assets/about-banner.png'
 
 function About (){
     return (

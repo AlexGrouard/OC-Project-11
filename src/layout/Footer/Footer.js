@@ -1,4 +1,4 @@
-import logo from '../../assets/UI/footer-logo.svg'
+import logo from 'assets/UI/footer-logo.svg'
 import styles from './Footer.module.scss'
 
 function Footer () {

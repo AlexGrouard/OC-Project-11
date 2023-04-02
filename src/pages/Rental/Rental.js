@@ -1,11 +1,11 @@
-import data from '../../data/data.json'
+import data from 'data/data.json'
 import styles from './Rental.module.scss'
 import { useParams } from 'react-router-dom'
-import Error from '../404/Error.js'
-import Tags from '../../components/Tags/Tags.js'
-import Star from '../../components/Star/Star.js'
-import Collapsable from '../../components/Collapsable/Collapsable';
-import Slideshow from '../../components/Slideshow/Slideshow'
+import Error from 'pages/404/Error.js'
+import Tags from 'components/Tags/Tags.js'
+import Star from 'components/Star/Star.js'
+import Collapsable from 'components/Collapsable/Collapsable';
+import Slideshow from 'components/Slideshow/Slideshow'
 
 function Rental() {
     const params = useParams();
@@ -25,7 +25,7 @@ function Rental() {
                 <div className={styles.info}>
                     <div className={styles.titles}>
                         <div className={styles.title}>{logement.title}</div>
-                        <div>{logement.location}</div>
+                        <div className={styles.location}>{logement.location}</div>
                         <div className={styles.allTag}>
                             {tags}
                         </div>

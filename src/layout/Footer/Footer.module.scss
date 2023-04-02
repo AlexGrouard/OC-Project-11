@@ -1,12 +1,12 @@
 footer {
   margin-top: 20px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
 
 .main {
-  height: 209px;
+  height: 193px;
   composes: allCenter from "../../style/index.scss";
   flex-direction: column;
   font-size: medium;
@@ -14,5 +14,16 @@ footer {
   color: white;
   img {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+
+  .main{
+    height: 125px;
+    font-size: 12px;
+    img {
+      margin-bottom: 20px;
+    }
   }
 }

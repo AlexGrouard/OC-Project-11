@@ -8,16 +8,14 @@ $secondary:#F6F6F6;
 
 
 //Style
-html{
-  min-height: 100%;
-}
+
 body {
   margin: 0;
   font-family: $font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $primary;
-  min-height: 100%;
+
 }
 a {
   color: $primary;
@@ -31,9 +29,7 @@ code {
 button {
   border: none;
 }
-#root{
-  height: 100%;
-}
+
 .primaryBackground {
   background-color: $primary;
   color: white;

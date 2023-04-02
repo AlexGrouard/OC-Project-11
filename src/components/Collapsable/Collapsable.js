@@ -1,6 +1,6 @@
 import styles from './Collapsable.module.scss'
-import arrowDown from '../../assets/UI/arrow-down.svg'
-import arrowUp from '../../assets/UI/arrow-up.svg'
+import arrowDown from 'assets/UI/arrow-down.svg'
+import arrowUp from 'assets/UI/arrow-up.svg'
 import { useState } from 'react';
 
 function Collapsable ({title, content}){

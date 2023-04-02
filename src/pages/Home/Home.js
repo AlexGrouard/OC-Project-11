@@ -1,8 +1,8 @@
-import data from '../../data/data.json'
+import data from 'data/data.json'
 import styles from './Home.module.scss'
-import Banner from '../../components/Banner/Banner.js'
-import Card from '../../components/Card/Card.js'
-import homeBanner from '../../assets/home-banner.png'
+import Banner from 'components/Banner/Banner.js'
+import Card from 'components/Card/Card.js'
+import homeBanner from 'assets/home-banner.png'
 
 function Home(){ 
     const Cards = data.map((logement) => <Card key={logement.id} logement={logement} />)

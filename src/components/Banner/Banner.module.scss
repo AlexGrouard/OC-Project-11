@@ -26,9 +26,12 @@
   .overlay{
     height: 112px;
     border-radius: 10px;
+    justify-content:flex-start;
   }
   .text {
     color: white;
     font-size: 24px;
+    width: 217px;
+    margin-left: 20px;
   }
 }

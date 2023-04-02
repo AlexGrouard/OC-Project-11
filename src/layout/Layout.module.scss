@@ -1,5 +1,6 @@
 .main{
     composes: centerContainer from "../style/index.scss";
+    min-height: 72vh;
 }
 
 @media screen and (max-width: 390px) {

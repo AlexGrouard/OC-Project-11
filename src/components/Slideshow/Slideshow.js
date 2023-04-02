@@ -5,6 +5,7 @@ function Slideshow({ images }) {
     let [currentSlide, setCurrentSlide] = useState(0); //to do more research to understand how the hook works
 
     const handleClick = () => {
+        console.log(currentSlide)
         //move up the list of images and at the max set back to 0
         if (currentSlide < images.length) { 
             setCurrentSlide(currentSlide++)

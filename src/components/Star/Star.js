@@ -1,6 +1,6 @@
 import styles from './Star.module.scss'
-import redStar from '../../assets/UI/star_red.svg'
-import greyStar from '../../assets/UI/star_grey.svg'
+import redStar from 'assets/UI/star_red.svg'
+import greyStar from 'assets/UI/star_grey.svg'
 
 function Star({ rating }){
     let i = 1
