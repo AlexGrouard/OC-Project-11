@@ -8,14 +8,15 @@ function Slideshow({ images }) {
         console.log(currentSlide)
         //move up the list of images and at the max set back to 0
         if (currentSlide < images.length) { 
-            setCurrentSlide(currentSlide++)
-            if (currentSlide === images.length) {currentSlide = 0}
+            setCurrentSlide(currentSlide + 1)
+            currentSlide++
+            if (currentSlide === images.length) {setCurrentSlide(currentSlide = 0)}
         }
-        //to use with swipe gesture
+/*         to use with swipe gesture
         if (currentSlide > images.length) {
             setCurrentSlide(currentSlide - 1)
             if (currentSlide === images.length) {currentSlide = images.length}
-        }
+        } */
     }  
 
     return (
