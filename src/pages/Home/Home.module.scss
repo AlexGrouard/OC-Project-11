@@ -1,32 +1,29 @@
 $secondary-color: #f6f6f6;
 
 .container {
-  background-color: $secondary-color;
-  margin: 46px auto;
-  border-radius: 25px;
-  padding-left: 50px;
-  padding-top: 56px;
+	background-color: $secondary-color;
+	margin: 46px auto;
+	border-radius: 25px;
+	padding-left: 50px;
+	padding-top: 56px;
 }
 
 .gridContainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -50px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -50px;
 }
 
-
 @media screen and (max-width: 390px) {
+	.container {
+		background-color: white;
+		margin: 20px auto;
+		justify-content: center;
+		padding: 0;
+	}
 
-  .container {
-    background-color: white;
-    margin: 20px auto;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .gridContainer {
-    margin-left: 0;
-  }
-
+	.gridContainer {
+		margin-left: 0;
+	}
 }

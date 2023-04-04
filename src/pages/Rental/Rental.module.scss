@@ -1,116 +1,113 @@
 .container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
-.cover{
-  composes: allCenter from "../../style/index.scss";
+.cover {
+	composes: allCenter from "../../style/index.scss";
 }
 .coverImg {
-  composes: bigRadius from "../../style/index.scss";
-  object-fit: cover;
-  height: 415px;
+	composes: bigRadius from "../../style/index.scss";
+	object-fit: cover;
+	height: 415px;
 }
 
 .info {
-  display: flex;
+	display: flex;
 }
-.titles{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 50%;
-  .title{
-    font-size: 36px;
-    font-weight: normal;
-  }
+.titles {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 50%;
+	.title {
+		font-size: 36px;
+		font-weight: normal;
+	}
 }
-.allTag{
-  composes: allCenter from "../../style/index.scss";
-  justify-content: flex-start;
+.allTag {
+	composes: allCenter from "../../style/index.scss";
+	justify-content: flex-start;
 }
 
 .rating {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  justify-content: space-around;
-  align-items:flex-end;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: space-around;
+	align-items: flex-end;
 }
 .pictures {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 10px;
-  .name {
-    width: 94px;
-    text-align: right;
-    margin-right: 10px;
-  }
-  .picture {
-    border-radius: 50%;
-    height: 64px;
-  }
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 10px;
+	.name {
+		width: 94px;
+		text-align: right;
+		margin-right: 10px;
+	}
+	.picture {
+		border-radius: 50%;
+		height: 64px;
+	}
 }
 
- .content {
-  display: flex;
-  margin-top: 30px;
+.content {
+	display: flex;
+	margin-top: 30px;
 }
 
 .description {
-  width : 50%;
-  margin-right: 20px;
+	width: 50%;
+	margin-right: 20px;
 }
 .equipement {
-  width : 50%;
+	width: 50%;
 }
 
 @media screen and (max-width: 390px) {
+	.coverImg {
+		height: 255px;
+	}
+	.info {
+		flex-direction: column;
+	}
+	.titles {
+		width: 100%;
+		.title {
+			margin: 10px 0;
+			font-size: 18px;
+		}
+		.location {
+			font-size: 12px;
+		}
+		.allTag {
+			flex-wrap: wrap;
+		}
+	}
 
-  .coverImg {
-    height: 255px;
-  }
-  .info{
-    flex-direction: column;
-  }
-  .titles{
-    width: 100%;
-    .title {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-    .location{
-      font-size: 12px;
-    }
-    .allTag{
-      flex-wrap: wrap;
-    }
-  }
+	.rating {
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		.pictures {
+			order: 2;
+		}
+		.name {
+			font-size: 12px;
+			width: 93px;
+		}
+	}
 
-  .rating {
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    .pictures{
-      order: 2;
-    }
-    .name{
-      font-size: 12px;
-      width: 93px;
-    }
-  }
-
-
-  .content {
-    display: block;
-  }
-  .description {
-    width : 100%;
-  }
-  .equipement {
-    width : 100%;
-  }
-
+	.content {
+		display: block;
+	}
+	.description {
+		width: 100%;
+	}
+	.equipement {
+		width: 100%;
+	}
 }

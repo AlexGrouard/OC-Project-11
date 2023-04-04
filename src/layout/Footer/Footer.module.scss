@@ -1,29 +1,28 @@
 footer {
-  margin-top: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+	margin-top: 20px;
+	position: relative;
+	bottom: 0;
+	width: 100%;
 }
 
 .main {
-  height: 193px;
-  composes: allCenter from "../../style/index.scss";
-  flex-direction: column;
-  font-size: medium;
-  background-color: black;
-  color: white;
-  img {
-    margin-bottom: 30px;
-  }
+	height: 193px;
+	composes: allCenter from "../../style/index.scss";
+	flex-direction: column;
+	font-size: medium;
+	background-color: black;
+	color: white;
+	img {
+		margin-bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 390px) {
-
-  .main{
-    height: 125px;
-    font-size: 12px;
-    img {
-      margin-bottom: 20px;
-    }
-  }
+	.main {
+		height: 125px;
+		font-size: 12px;
+		img {
+			margin-bottom: 20px;
+		}
+	}
 }
