@@ -6,27 +6,25 @@ import { useState } from "react"
 function Slideshow({ images }) {
 	let [currentSlide, setCurrentSlide] = useState(0) //to do more research to understand how the hook works
 
-	const handleClick = () => {
-		//console.log(currentSlide)
+	const nextClick = () => {
 		//move up the list of images and at the max set back to 0
-		if (currentSlide < images.length) {
-			setCurrentSlide(currentSlide + 1)
-			currentSlide++
-			if (currentSlide === images.length) {
-				setCurrentSlide((currentSlide = 0))
-			}
+		setCurrentSlide(currentSlide + 1)
+		currentSlide++
+		if (currentSlide === images.length) {
+			setCurrentSlide((currentSlide = 0))
 		}
-		if (currentSlide > images.length) {
+	}
+	const previousClick = () => {
+		if (currentSlide === 0) {
+			currentSlide = images.length
+		} else {
 			setCurrentSlide(currentSlide - 1)
-			if (currentSlide === images.length) {
-				currentSlide = images.length
-			}
 		}
 	}
 
 	return (
 		<div className={styles.main}>
-			<button className={styles.slideshow} onClick={handleClick}>
+			<button className={styles.slideshow} onClick={nextClick}>
 				<img
 					className={styles.image}
 					src={images[currentSlide]}
@@ -35,16 +33,10 @@ function Slideshow({ images }) {
 			</button>
 			{/* need to implement a rollback to the start*/}
 			<div className={styles.control}>
-				<button
-					className={styles.previousBtn}
-					onClick={() => setCurrentSlide(currentSlide - 1)}
-				>
+				<button className={styles.previousBtn} onClick={previousClick}>
 					<img src={arrowLeft} alt='previous' />
 				</button>
-				<button
-					className={styles.nextBtn}
-					onClick={() => setCurrentSlide(currentSlide + 1)}
-				>
+				<button className={styles.nextBtn} onClick={nextClick}>
 					<img src={arrowRight} alt='next' />
 				</button>
 			</div>
