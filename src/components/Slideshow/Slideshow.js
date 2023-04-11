@@ -4,10 +4,9 @@ import arrowRight from "assets/UI/arrow-right.png"
 import { useState } from "react"
 
 function Slideshow({ images }) {
-	let [currentSlide, setCurrentSlide] = useState(0) //to do more research to understand how the hook works
+	let [currentSlide, setCurrentSlide] = useState(0) 
 
 	const nextClick = () => {
-		//move up the list of images and at the max set back to 0
 		setCurrentSlide(currentSlide + 1)
 		currentSlide++
 		if (currentSlide === images.length) {
@@ -31,7 +30,6 @@ function Slideshow({ images }) {
 					alt={`Slide ${currentSlide}`}
 				/>
 			</button>
-			{/* need to implement a rollback to the start*/}
 			<div className={styles.control}>
 				<button className={styles.previousBtn} onClick={previousClick}>
 					<img src={arrowLeft} alt='previous' />
