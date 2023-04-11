@@ -29,11 +29,31 @@
 	}
 }
 
+.number{
+	position: relative;
+	top: -3vh;
+	left : 48vh;
+	color: white;
+	font-size: 18px;
+}
+
 @media screen and (max-width: 390px) {
+	.main {
+		height: 255px;
+	}
 	.slideshow {
 		height: 255px;
 	}
 	.image {
 		border-radius: 10px;
+	}
+	.control{
+		top: -16vh;
+		img{
+			height: 20px;
+		}
+	}
+	.number{
+		display: none;
 	}
 }

@@ -16,7 +16,10 @@
 .arrow {
 	padding-right: 10px;
 }
-
+ul{
+	list-style-type: none;
+	padding-left: 20px;
+}
 .content {
 	composes: secondaryBackground from "../../style/index.scss";
 	composes: smallRadius from "../../style/index.scss";

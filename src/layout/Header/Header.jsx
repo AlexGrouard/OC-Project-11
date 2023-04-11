@@ -7,15 +7,12 @@ function Header() {
 		<header className={styles.header}>
 			<div className={styles.logo}>
 				<Link to='/'>
-					<img
-						src={logo}
-						alt='footer logo'
-					></img>
+					<img src={logo} alt='footer logo'></img>
 				</Link>
 			</div>
 			<nav>
 				<NavLink to='/'>Accueil</NavLink>
-				<NavLink to='/about'>A propos</NavLink>
+				<NavLink to='/about'>A Propos</NavLink>
 			</nav>
 		</header>
 	)

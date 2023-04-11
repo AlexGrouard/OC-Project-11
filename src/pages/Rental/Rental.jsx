@@ -1,31 +1,23 @@
 import data from "data/data.json"
 import styles from "./Rental.module.scss"
 import { useParams } from "react-router-dom"
-import Error from "pages/404/Error.js"
-import Tags from "components/Tags/Tags.js"
-import Star from "components/Star/Star.js"
+import Error from "pages/404/Error"
+import Tags from "components/Tags/Tags"
+import Star from "components/Star/Star"
 import Collapsable from "components/Collapsable/Collapsable"
 import Slideshow from "components/Slideshow/Slideshow"
 
 function Rental() {
 	const params = useParams()
 	const logement = data.find((e) => e.id === params.id)
-	const tags = logement.tags.map((tag, id) => (
-		<Tags
-			key={id}
-			tag={tag}
-		/>
-	))
 	if (!logement) {
 		return <Error />
 	} else {
+		const tags = logement.tags.map((tag, id) => <Tags key={id} tag={tag} />)
 		return (
 			<section className={styles.container}>
 				<div className={styles.cover}>
-					<Slideshow
-						className={styles.coverImg}
-						images={logement.pictures}
-					/>
+					<Slideshow className={styles.coverImg} images={logement.pictures} />
 				</div>
 				<div className={styles.info}>
 					<div className={styles.titles}>
@@ -49,16 +41,10 @@ function Rental() {
 				</div>
 				<article className={styles.content}>
 					<div className={styles.description}>
-						<Collapsable
-							title='Description'
-							content={logement.description}
-						/>
+						<Collapsable title='Description' content={logement.description} />
 					</div>
 					<div className={styles.equipement}>
-						<Collapsable
-							title='Equipements'
-							content={logement.equipments}
-						/>
+						<Collapsable title='Equipements' content={logement.equipments} />
 					</div>
 				</article>
 			</section>
