@@ -51,7 +51,6 @@
 	.picture {
 		border-radius: 50%;
 		height: 64px;
-		
 	}
 }
 
@@ -74,6 +73,7 @@
 	}
 	.info {
 		flex-direction: column;
+		margin-top: 0;
 	}
 	.titles {
 		width: 100%;
@@ -86,6 +86,7 @@
 		}
 		.allTag {
 			flex-wrap: wrap;
+			margin-bottom:10px;
 		}
 	}
 
@@ -96,6 +97,9 @@
 		justify-content: space-between;
 		.pictures {
 			order: 2;
+			.picture {
+				height: 35px;
+			}
 		}
 		.name {
 			font-size: 12px;
