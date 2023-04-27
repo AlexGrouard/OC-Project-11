@@ -1,14 +1,17 @@
 # Projet Kasa
 
-This project is part of my OpenClassrooms Front End Dev courses. The goal of this project is to familiarize itself with React and React Router logic.
+## Introduction 
 
-## Prompt
+Project n°6 on my Front-end Dev curiculum with OpenClassrooms
+
+The goal of this project is to familiarize itself with React and React Router logic.
+
+## Prompt of the project
 
 Your task is to develop a new web application for a renting business.
 
-### Limitations
-
-Use React and React Router
-CSS or SCSS but nothing else
-no other libraries is allowed.
-
+As a new Fron-end dev my work was :
+  - Gather all infos
+  - Get the mockup JSON files
+  - HTML/CSS Integration from figma
+  - Add dynamic element with react
